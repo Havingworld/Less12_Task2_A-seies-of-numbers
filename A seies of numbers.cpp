@@ -19,10 +19,20 @@ int numbers[15] = {114,111, 106, 107, 108, 105, 115,  108, 110, 109, 112, 113, 1
 */
 
 #include <iostream>
-#include <string>
 using namespace std;
 
 int main()
 {
-    cout << "Hello World!\n";
+    int numbers[15] = { 114,111, 106, 107, 108, 105, 115,  108, 110, 109, 112, 113, 116, 117, 118 };
+    int repit;
+    for (int n = 0; n < 15; n++) {
+        for (int i = n+1; i < 15; i++)
+        {
+            if (numbers[n] == numbers[i]){
+                repit = numbers[n];
+                break;
+                }
+        }
+    }
+    cout << repit << endl;
 }
