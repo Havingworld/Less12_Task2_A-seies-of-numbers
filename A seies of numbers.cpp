@@ -38,9 +38,22 @@ int main()
     cout << repit << endl;
 */
     int numbers[15] = {114, 111, 106, 107, 108, 105, 115, 108, 110, 109, 112, 113, 116, 117, 118};
-    int repit, min = numbers[0], sum = 0;
+    int repit, min = numbers[0], sumall = 0;
     for (int n = 0; n < 15; n++) {
         if (n > 0 && numbers[n] < min) min = numbers[n];
-        sum += numbers[n];
+        sumall += numbers[n];
+        //wtf sum?
     }
+    /*
+     Input: [1, 4, 3, 3, 2, 5]
+     Sum = 18
+      As in this example, we have n = 5:
+      Sum of 1 to 5 = 1 + 2 + 3 + 4 + 5 = 15
+       => 18 - 15 = 3 so 3 is the duplicate
+    */
+    int sum14 = min;
+    for (int n = 1; n < 15; n++) {
+        sum14 += 1;
+    }
+    cout << sumall - sum14 << endl;
 }
